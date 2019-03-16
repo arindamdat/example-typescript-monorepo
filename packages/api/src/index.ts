@@ -19,7 +19,9 @@ app.use((req: any, res: any, next: any) => {
 app.get("/", (req: any, res: any) => {
   res.json("Example MonoRepo API");
 });
-
+app.get("/ping", (req: any, res: any) => {
+  res.json("Live!!!");
+});
 app.use("/api", controllers);
 
 app.listen(port);
